@@ -1,3 +1,19 @@
+// Mostrar botón para activar música en móviles y manejar reproducción
+window.addEventListener('DOMContentLoaded', function() {
+	var audio = document.getElementById('musica-navidad');
+	var btn = document.getElementById('play-music-btn');
+	// Detectar si es móvil
+	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	if (isMobile && btn && audio) {
+		btn.style.display = 'block';
+		btn.addEventListener('click', function() {
+			audio.play();
+			btn.style.display = 'none';
+		});
+		// Pausar música hasta interacción
+		audio.pause();
+	}
+});
 // Hacer que la música repita cuando termine
 window.addEventListener('DOMContentLoaded', function() {
 	var audio = document.getElementById('musica-navidad');
