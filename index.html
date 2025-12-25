@@ -1,0 +1,114 @@
+*<!DOCTYPE html>
+<html lang=es>
+
+  <head>
+    <meta charset=UTF-8>
+    <meta http-equiv=X-UA-Compatible content=IE=edge>
+    <meta name=viewport content=width=device-width,initial-scale=1.0>
+    <link rel=stylesheet href=css/style.css>
+    <style>
+      html, body {
+        background: black !important;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+      main, #arbol-navidad-contenedor {
+        max-width: 600px;
+        margin: auto;
+        width: 100%;
+      }
+      #arbol-navidad-contenedor {
+        box-sizing: border-box;
+        padding: 2rem 1rem;
+      }
+      .estrella {
+        font-size: 12vw;
+        min-font-size: 48px;
+      }
+      #arbol span {
+        font-size: 4vw;
+        min-font-size: 16px;
+      }
+      h1, p {
+        word-break: break-word;
+      }
+      footer > div {
+        background: black;
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+      }
+      @media (max-width: 600px) {
+        main, #arbol-navidad-contenedor {
+          max-width: 100vw;
+          padding: 1rem 0.5rem;
+        }
+        .estrella {
+          font-size: 16vw;
+        }
+        #arbol span {
+          font-size: 7vw;
+        }
+        h1 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+    <style>
+      html, body {
+        background: black !important;
+      }
+    </style>
+    <link href=https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,600&display=swap rel=stylesheet>
+    <title>Feliz Navidad !!</title>
+    <!--Font Awesone, FlatIcon no funciona-->
+    <script src="https://kit.fontawesome.com/a59e4794ac.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+          <h1>El espíritu de la Navidad ya ha llegado</h1> 
+          <video src="recursos/My Movie 3.mp4"></video>
+      </header>
+      <div class="imgInicial" id="#sanIgnacio">
+        
+      </div>
+    </main>
+    <!-- Árbol de Navidad integrado -->
+    <div id="arbol-navidad-contenedor" style="background:black;display:grid;justify-content:center;text-align:center;padding:2rem 0;">
+      <link rel="stylesheet" href="arbol-de-navidad/css/styles.css">
+      <div class="estrella">*</div>
+      <div id="arbol"></div>
+      <h1 style="color:greenyellow;text-align:center;">FELIZ NAVIDAD!!! Y PRÓSPERO AÑO NUEVO 2026</h1>
+      <script src="arbol-de-navidad/js/animacion.js"></script>
+    </div>
+    <div id="iconos">
+      <i id="musica" class="fas fa-play fa-2x"></i>
+      <i id="nieve" class="far fa-snowflake fa-2x" ></i>
+    </div>
+    <script src="../Arbol-de-navidad/js/animacion.js"></script>
+    <!--Musica-->
+    <audio src="recursos/christmas.mp3"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <div style="background:black;width:100%;padding:1rem 0;">
+        <!-- Puedes agregar aquí el contenido del footer si lo deseas -->
+      </div>
+    <!--Librerías de animaciones-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Debugging-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js" integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+   
+    <div id="particles-js"></div>
+    <!--Script página navideña-->
+    <script src="js/script.js"></script>
+    <!--Partículas-->
+    <script src="js/particles.js"></script>
+  </body>
+</html>
