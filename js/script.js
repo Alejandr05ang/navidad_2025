@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	var video = document.querySelector('header video');
 	var errorMsg = document.getElementById('media-error-msg');
 	if (overlay) {
+		var btn = document.getElementById('start-experience-btn');
 		var startExperience = function() {
 			overlay.style.display = 'none';
 			var audioPromise = audio ? audio.play() : Promise.resolve();
@@ -16,11 +17,9 @@ window.addEventListener('DOMContentLoaded', function() {
 					errorMsg.style.display = 'flex';
 				}
 			});
-			document.body.removeEventListener('touchstart', startExperience);
-			document.body.removeEventListener('click', startExperience);
+			if (btn) btn.removeEventListener('click', startExperience);
 		};
-		document.body.addEventListener('touchstart', startExperience);
-		document.body.addEventListener('click', startExperience);
+		if (btn) btn.addEventListener('click', startExperience);
 	}
 });
 // Mostrar botón para activar música en móviles y manejar reproducción
