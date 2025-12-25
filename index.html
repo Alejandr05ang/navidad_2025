@@ -88,7 +88,15 @@
       <div style="position:absolute; top:0; left:0; width:100vw; height:100vh; display:flex; align-items:center; justify-content:center; z-index:2; pointer-events:none;">
         <div style="width:100%; text-align:center; color:white; padding:2rem 0;">
             <!-- Botón para activar música en móviles -->
-            <button id="play-music-btn" style="position:fixed;bottom:80px;left:20px;z-index:20000;padding:1rem 2rem;font-size:1.2rem;background:#d32f2f;color:#fff;border:none;border-radius:2rem;box-shadow:0 2px 8px #000;display:none;">Toca para activar música</button>
+
+              <!-- Mensaje de error de reproducción -->
+              <div id="media-error-msg" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:40000;background:rgba(255,255,255,0.95);color:#d32f2f;align-items:center;justify-content:center;text-align:center;font-size:1.3rem;padding:2rem;">
+                <div>
+                  <b>¡No se pudo reproducir el video o la música automáticamente!</b><br>
+                  Por favor, usa el modo escritorio o revisa los permisos de tu navegador.<br>
+                  <span style="font-size:2rem;">🎄</span>
+                </div>
+              </div>
           <h1 style="font-size:3rem; margin:0; text-shadow:0 2px 8px #000;">El espíritu de la Navidad ya ha llegado</h1>
         </div>
       </div>

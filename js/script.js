@@ -3,15 +3,19 @@ window.addEventListener('DOMContentLoaded', function() {
 	var overlay = document.getElementById('welcome-overlay');
 	var audio = document.getElementById('musica-navidad');
 	var video = document.querySelector('header video');
+	var errorMsg = document.getElementById('media-error-msg');
 	if (overlay) {
 		var startExperience = function() {
 			overlay.style.display = 'none';
-			if (audio) {
-				audio.play();
-			}
-			if (video) {
-				video.play && video.play();
-			}
+			var audioPromise = audio ? audio.play() : Promise.resolve();
+			var videoPromise = video && video.play ? video.play() : Promise.resolve();
+			// Si alguna reproducción falla, mostrar mensaje
+			Promise.allSettled([audioPromise, videoPromise]).then(function(results) {
+				var failed = results.some(function(r) { return r.status === 'rejected'; });
+				if (failed && errorMsg) {
+					errorMsg.style.display = 'flex';
+				}
+			});
 			document.body.removeEventListener('touchstart', startExperience);
 			document.body.removeEventListener('click', startExperience);
 		};
