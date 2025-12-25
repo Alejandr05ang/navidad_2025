@@ -1,3 +1,24 @@
+// Pantalla de bienvenida universal: activa música y video al tocar
+window.addEventListener('DOMContentLoaded', function() {
+	var overlay = document.getElementById('welcome-overlay');
+	var audio = document.getElementById('musica-navidad');
+	var video = document.querySelector('header video');
+	if (overlay) {
+		var startExperience = function() {
+			overlay.style.display = 'none';
+			if (audio) {
+				audio.play();
+			}
+			if (video) {
+				video.play && video.play();
+			}
+			document.body.removeEventListener('touchstart', startExperience);
+			document.body.removeEventListener('click', startExperience);
+		};
+		document.body.addEventListener('touchstart', startExperience);
+		document.body.addEventListener('click', startExperience);
+	}
+});
 // Mostrar botón para activar música en móviles y manejar reproducción
 window.addEventListener('DOMContentLoaded', function() {
 	var audio = document.getElementById('musica-navidad');
